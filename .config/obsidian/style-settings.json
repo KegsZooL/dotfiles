@@ -21,10 +21,10 @@
   "anuppuccin-theme-settings@@anp-disable-newtab-align": true,
   "anuppuccin-theme-settings@@anp-safari-tab-animated": true,
   "anuppuccin-theme-settings@@anp-autohide-titlebar": true,
-  "anuppuccin-theme-settings@@anp-toggle-metadata": false,
+  "anuppuccin-theme-settings@@anp-toggle-metadata": true,
   "anuppuccin-theme-settings@@anp-toggle-scrollbars": false,
-  "anuppuccin-theme-settings@@anp-hide-status-bar": false,
-  "anuppuccin-theme-settings@@anp-tooltip-toggle": false,
+  "anuppuccin-theme-settings@@anp-hide-status-bar": true,
+  "anuppuccin-theme-settings@@anp-tooltip-toggle": true,
   "anuppuccin-theme-settings@@anp-bg-fix": false,
   "anuppuccin-theme-settings@@anp-alt-rainbow-style": "anp-simple-rainbow-color-toggle",
   "anuppuccin-theme-settings@@anp-rainbow-file-toggle": false,
@@ -105,5 +105,5 @@
   "anuppuccin-theme-settings@@ctp-custom-overlay2@@dark": "#D4BE98",
   "anuppuccin-theme-settings@@ctp-custom-text@@dark": "#D4BE98",
   "anuppuccin-theme-settings@@ctp-custom-flamingo@@dark": "#D4BE98",
-  "anuppuccin-theme-settings@@ctp-custom-crust@@dark": "#E55436"
+  "anuppuccin-theme-settings@@ctp-custom-crust@@dark": "#7DAEA3"
 }
