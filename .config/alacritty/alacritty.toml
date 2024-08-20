@@ -24,6 +24,16 @@ action = "IncreaseFontSize"
 key = "PageDown"
 action = "DecreaseFontSize"
 
+[[keyboard.bindings]]
+key = "c"
+mods = "Control|Shift"
+chars = "\u0003"
+
+[[keyboard.bindings]]
+key = "c"
+mods = "Control"
+action = "Copy"
+
 [window]
 title = ''
 blur = false
