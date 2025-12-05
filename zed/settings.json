@@ -1,0 +1,96 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "agent": {
+    "default_model": {
+      "provider": "lmstudio",
+      "model": "mistralai/mistral-nemo-instruct-2407"
+    }
+  },
+  "icon_theme": "Catppuccin Macchiato",
+  "vim_mode": true,
+  "ui_font_size": 25,
+  "buffer_font_size": 25,
+  "cursor_blink": false,
+  "relative_line_numbers": true,
+  "autosave": "on_window_change",
+  "experimental.theme_overrides": {
+    "renamed.background": "#FFFFFF20",
+    "search.match_background": "#FFFFFF20",
+    "ghost_element.background": "#00000010",
+    "ghost_element.hover": "#00000099",
+    "background.appearance": "blurred",
+    "background": "#000000CC",
+    "editor.background": "#00000010",
+    "editor.gutter.background": "#00000010",
+    "title_bar.background": "#000000DF",
+    "toolbar.background": "#00000010",
+    "terminal.background": "#00000000",
+    "status_bar.background": "#000000DF",
+    "tab_bar.background": "#00000010",
+    "panel.background": "#00000010",
+    "border": "#00000000",
+    "border.variant": "#00000000",
+    "editor.active_line.background": "#00000000"
+  },
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": false
+  },
+  "inlay_hints": {
+    "enabled": true
+  },
+  "search": {
+    "button": false,
+    "case_sensitive": true
+  },
+  "git_panel": {
+    "button": false
+  },
+  "terminal": {
+    "button": false
+  },
+  "debugger": {
+    "button": false
+  },
+  "notification_panel": {
+    "button": false
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "outline_panel": {
+    "button": false
+  },
+  "project_panel": {
+    "button": false
+  },
+  "hide_mouse": "on_typing_and_movement",
+  "tab_bar": {
+    "show": true
+  },
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Macchiato - No Italics",
+    "dark": "Catppuccin Macchiato"
+  },
+  "lsp": {
+    "pyright": {
+      "settings": {
+        "python.analysis": {
+          "diagnosticMode": "workspace",
+          "typeCheckingMode": "off"
+        }
+      }
+    }
+  },
+  "scrollbar": {
+    "show": "never"
+  }
+}

@@ -1,0 +1,96 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-s": "workspace::Save",
+      "ctrl-alt-s": "workspace::SaveAll",
+      "alt-'": "editor::ToggleComments",
+      "ctrl-l": [
+        "workspace::MoveItemToPaneInDirection",
+        { "direction": "right" }
+      ],
+      "ctrl-h": [
+        "workspace::MoveItemToPaneInDirection",
+        { "direction": "left" }
+      ],
+      "ctrl-k": ["workspace::MoveItemToPaneInDirection", { "direction": "up" }],
+      "ctrl-j": [
+        "workspace::MoveItemToPaneInDirection",
+        { "direction": "down" }
+      ],
+      "alt-t": "pane::SplitRight",
+      "alt-m": "pane::ActivateNextItem",
+      "alt-n": "pane::ActivatePreviousItem",
+      "alt-q": "pane::CloseActiveItem",
+      "alt-=": "vim::ResizePaneUp",
+      "alt--": "vim::ResizePaneDown",
+      "alt-,": "vim::ResizePaneLeft",
+      "alt-.": "vim::ResizePaneRight",
+      "alt-o": "editor::Hover",
+      "alt-c": "editor::GoToDefinition",
+      "alt-x": "editor::GoToImplementation",
+      "alt-f": "editor::FindAllReferences",
+      "alt-i": "editor::ShowSignatureHelp",
+      "alt-r": "editor::Rename",
+      "\\ f f": "file_finder::Toggle",
+      "\\ f w": "pane::DeploySearch",
+      "\\ g b": "git::Branch",
+      "\\ e e": "project_panel::Open",
+      "\\ m d": "markdown::OpenPreview",
+      "\\ g s": "git::Diff",
+      "ctrl-n": "vim::SelectNext",
+      "[ d": "editor::GoToPreviousDiagnostic",
+      "] d": "editor::GoToDiagnostic",
+      "alt-k": "editor::MoveLineUp",
+      "alt-j": "editor::MoveLineDown",
+      "tab": "editor::ContextMenuNext",
+      "shift-tab": "editor::ContextMenuPrevious"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      "alt-s": "workspace::ActivatePaneRight",
+      "alt-a": "workspace::ActivatePaneLeft",
+      "alt-e": "workspace::ActivatePaneUp",
+      "alt-d": "workspace::ActivatePaneDown",
+      "g n": "editor::GoToHunk",
+      "g p": "editor::GoToPreviousHunk",
+      "tab": "editor::Tab",
+      "shift-tab": "editor::Backtab",
+      "\\ e e": "project_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "alt-1": "editor::ToggleCodeActions"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "\\ e e": "project_panel::Open"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "r": "project_panel::Rename",
+      "d": "project_panel::Delete",
+      "a": "project_panel::NewFile",
+      "y": "project_panel::Copy",
+      "Y": "workspace::CopyRelativePath",
+      "p": "project_panel::Paste",
+      "P": "project_panel::Duplicate",
+      "\\ e e": "project_panel::ToggleFocus"
+    }
+  }
+]

@@ -1,0 +1,23 @@
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 13.0
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+
+[[keyboard.bindings]]
+key = "PageUp"
+action = "IncreaseFontSize"
+
+[[keyboard.bindings]]
+key = "PageDown"
+action = "DecreaseFontSize"
+
+[window]
+title = ''
+blur = false
+decorations = "buttonless"
+opacity = 0.92
+dimensions = { columns = 110, lines = 30 }

@@ -1,0 +1,12 @@
+{
+    "workbench.colorTheme": "Catppuccin Macchiato",
+    "workbench.iconTheme": "catppuccin-macchiato",
+    "files.autoSave": "afterDelay",
+    "editor.fontSize": 16,
+    "editor.fontFamily": "Jetbrains Mono",
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.vertical": "hidden",
+    "workbench.layoutControl.enabled": false,
+    "vim.useSystemClipboard": true,
+    "workbench.editor.enablePreview": false
+}
