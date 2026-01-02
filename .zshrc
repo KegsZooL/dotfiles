@@ -22,7 +22,7 @@ export PATH="$HOME/.local/bin:$PATH"
 export OPENAI_API_BASE=http://localhost:1234/v1
 
 #Neofetch
-neofetch
+fastfetch
 umask 000
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
