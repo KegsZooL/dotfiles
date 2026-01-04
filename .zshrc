@@ -21,14 +21,13 @@ export VISUAL=nvim
 export PATH="$HOME/.local/bin:$PATH"
 export OPENAI_API_BASE=http://localhost:1234/v1
 
-#Neofetch
-fastfetch
+# neofetch
+fastfetch  -l Shebang
 umask 000
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
@@ -130,9 +129,9 @@ source $ZSH/oh-my-zsh.sh
 
 alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias ls="lsd -la"
+alias ls='lsd --color=always --blocks permission,user,size,name -a --group-dirs first'
 alias p10kconfig="nvim ~/.p10k.zsh"
-alias cat="bat"
+alias kittyconfig="nvim ~/.config/kitty/kitty.conf"
 alias find="fd"
 alias htop="btop"
 alias alacrittyconf="nvim $HOME/.config/alacritty/alacritty.toml"
@@ -175,3 +174,4 @@ ___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_V
 
 # Created by `pipx` on 2025-07-31 15:47:43
 export PATH="$PATH:/home/kegszool/.local/bin"
+export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
