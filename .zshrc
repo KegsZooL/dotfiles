@@ -20,6 +20,7 @@ export EDITOR=nvim
 export VISUAL=nvim
 export PATH="$HOME/.local/bin:$PATH"
 export OPENAI_API_BASE=http://localhost:1234/v1
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # neofetch
 fastfetch  -l Shebang
@@ -138,6 +139,7 @@ alias alacrittyconf="nvim $HOME/.config/alacritty/alacritty.toml"
 alias dvu="sudo docker compose down && sudo docker compose down --volumes && sudo docker compose up -d"
 alias ddv="sudo docker compose down && sudo docker compose down --volumes"
 alias dps="sudo docker compose ps -a"
+unalias gg
 
 git() {
   if [ "$1" = "log" ]; then
