@@ -1,0 +1,8 @@
+tabs = true
+
+
+[font]
+normal = ['JetBrainsMono Nerd Font Mono'] # Will use the bundled Fira Code Nerd Font by default
+bold = ['JetBrainsMono NFM ExtraBold']  
+size = 15.0
+
