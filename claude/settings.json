@@ -1,0 +1,6 @@
+{
+  "statusLine": {
+    "type": "command",
+    "command": "input=$(cat); dir=$(echo \"$input\" | jq -r '.workspace.current_dir'); dir_name=$(basename \"$dir\"); branch=$(cd \"$dir\" 2>/dev/null && git -c core.useBuiltinFSMonitor=false rev-parse --abbrev-ref HEAD 2>/dev/null); [ -n \"$branch\" ] && branch=\" ($branch)\"; model=$(echo \"$input\" | jq -r '.model.display_name'); inp=$(echo \"$input\" | jq -r '.context_window.total_input_tokens // 0'); out=$(echo \"$input\" | jq -r '.context_window.total_output_tokens // 0'); mid=$(echo \"$input\" | jq -r '.model.id'); case \"$mid\" in *opus*) ic=15.00; oc=75.00;; *sonnet*) ic=3.00; oc=15.00;; *haiku*) ic=0.80; oc=4.00;; *) ic=3.00; oc=15.00;; esac; scost=$(awk -v i=\"$inp\" -v o=\"$out\" -v ic=\"$ic\" -v oc=\"$oc\" 'BEGIN {printf \"%.4f\", (i/1000000)*ic + (o/1000000)*oc}'); cf=\"$HOME/.claude/cost_tracking.json\"; tcost=\"0.0000\"; ttcost=\"0.0000\"; if [ -f \"$cf\" ]; then today=$(date +%Y-%m-%d); tcost=$(jq -r --arg d \"$today\" '.daily[$d] // 0' \"$cf\" 2>/dev/null || echo \"0.0000\"); ttcost=$(jq -r '.total // 0' \"$cf\" 2>/dev/null || echo \"0.0000\"); fi; ctx=$(echo \"$input\" | jq -r '.context_window.used_percentage // 0'); printf \"%s%s | %s | \\$%s | \\$%s | \\$%s | %.1f%%\" \"$dir_name\" \"$branch\" \"$model\" \"$scost\" \"$tcost\" \"$ttcost\" \"$ctx\""
+  }
+}
