@@ -22,6 +22,9 @@ export PATH="$HOME/.local/bin:$PATH"
 export OPENAI_API_BASE=http://localhost:1234/v1
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# OrbStack for MacOS
+export DOCKER_HOST=unix://$HOME/.orbstack/run/docker.sock
+
 # neofetch
 fastfetch  -l Shebang
 umask 022
@@ -139,11 +142,12 @@ alias alacrittyconf="nvim $HOME/.config/alacritty/alacritty.toml"
 alias dvu="sudo docker compose down && sudo docker compose down --volumes && sudo docker compose up -d"
 alias ddv="sudo docker compose down && sudo docker compose down --volumes"
 alias dps="sudo docker compose ps -a"
+alias act='act --artifact-server-addr "$(ipconfig getifaddr en0)"'
 unalias gg
 
 git() {
   if [ "$1" = "log" ]; then
-    command git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(auto)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)'
+    command git log --graph --abbrev-commit --show-signature --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(auto)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)'
   elif [ "$1" = "merge" ]; then
     shift
     command git merge --no-ff "$@"
@@ -172,8 +176,28 @@ bindkey '^H' backward-kill-word
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
-___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
 
 # Created by `pipx` on 2025-07-31 15:47:43
 export PATH="$PATH:/home/kegszool/.local/bin"
 export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/share/dotnet:$PATH"
+
+# TODO: CHANGE TOKEN
+export GITLAB_TOKEN="CHANGE_ME"
+
+export GITLAB_URL="https://dev.saltbox.pro/"
+export PATH="$HOME/Library/Python/3.9/bin:$PATH"
+export PULUMI_CONFIG_PASSPHRASE="tarkov"
+export GPG_TTY=$(tty)
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/danilcistakov/.lmstudio/bin"
+# End of LM Studio CLI section
+
+
+# The next line updates PATH for CLI.
+if [ -f "$PATH/yandex-cloud/path.bash.inc" ]; then source "$PATH/yandex-cloud/path.bash.inc"; fi
+
+# The next line enables shell command completion for yc.
+if [ -f "$PATH/yandex-cloud/completion.zsh.inc" ]; then source "$PATH/yandex-cloud/completion.zsh.inc"; fi
+

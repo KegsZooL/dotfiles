@@ -1,0 +1,63 @@
+user: 255
+group: 250
+
+permission:
+  read: 250
+  write: 245
+  exec: 250
+  exec-sticky: 250
+  no-access: 240
+  octal: 245
+  acl: 245
+  context: 250
+
+date:
+  foreground: red
+  bold: true
+
+size:
+  none: 240
+  small: 245
+  medium: 250
+  large: 255
+
+inode:
+  valid: 250
+  invalid: 240
+
+links:
+  valid: 250
+  invalid: 240
+
+tree-edge: 240
+
+git-status:
+  default: 245
+  unmodified: 245
+  ignored: 240
+
+  new-in-index: 255
+  new-in-workdir: 255
+  typechange: 250
+  deleted: 240
+  renamed: 250
+  modified: 250
+  conflicted: 240
+
+file-type:
+  file: 247
+  directory: 255
+  symlink: 243
+  pipe: 244
+  socket: 244
+  block-device: 244
+  char-device: 244
+  special: 245
+  executable: 255
+  mount-point: 255
+
+file:
+  normal: 247
+  directory: 255
+  executable: 255
+  symlink: 243

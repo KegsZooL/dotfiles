@@ -1,0 +1,4 @@
+color:
+  theme: custom
+  custom:
+    path: ~/.config/lsd/colors.yaml
